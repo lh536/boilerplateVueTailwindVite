@@ -10,6 +10,7 @@ This is my own initial VueJS, Tailwind CSS and ViteJS boilerplate with my curren
 
 * VueJS
 * Vue Router
+* Vuex
 
 
 
