@@ -1,6 +1,7 @@
 <template>
     <h1>Home Page</h1>
     <demo-form message="Hi!! I'm a message from App.vue" />
+    <counter />
 </template>
 
 
@@ -11,6 +12,7 @@ import { defineAsyncComponent } from "vue" // LAZY LOADING
         name: 'Home',
         components: {
             DemoForm: defineAsyncComponent ( () => import ('@/modules/demo/components/DemoForm.vue')), // LAZY LOADING
+            Counter: defineAsyncComponent ( () => import ('@/modules/demo/components/Counter.vue'))
             // DemoForm,
         }
     }
