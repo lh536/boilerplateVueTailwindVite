@@ -1,18 +1,25 @@
 <template>
-    <navbar />
+    <img alt="Vue logo" class="logo mx-auto py-12" src="@/assets/logo.svg" width="125" height="125" />
+    <!-- <home-view /> -->
+    <header>
+        <nav class="text-center space-x-6 pt-2">
+            <router-link class="px-4 py-2 rounded-xl border-2 hover:bg-slate-600 hover:text-slate-200" to="/">Home</router-link>
+            <router-link class="px-4 py-2 rounded-xl border-2 hover:bg-slate-600 hover:text-slate-200" to="/about">About</router-link>
+        </nav>
+    </header>
     <router-view />
-
 
 </template>
 
 
 <script>
+import { RouterLink, RouterView } from "vue-router"
 import { defineAsyncComponent } from "vue"
 
   export default {
     name: 'App',
     components: {
-        Navbar: defineAsyncComponent( () => import ('@/modules/shared/components/Navbar.vue') ),
+        HomeView: defineAsyncComponent( () => import ('@/views/HomeView.vue') ),
     },
   }
 
@@ -22,26 +29,3 @@ import { defineAsyncComponent } from "vue"
 <style scopped>
 
 </style>
-
-
-<!-- <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
-<template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
-</template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style> -->
